@@ -1,7 +1,7 @@
 #my first Makefile example
 override LIBS += -lopencv_core\
-		-l opencv_imgproc\
-		-l opencv_highgui
+		-lopencv_imgproc\
+		-lopencv_highgui
 CFLAGS = 
 
 SRC_DIR = ./src

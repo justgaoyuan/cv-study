@@ -6,11 +6,17 @@
 using namespace cv;  
   
   
-int main()  
+int main(int argc, char* argv[])
 {
-	Mat img = imread("menu.png");
+	if (argc < 2)
+	{
+		std::cout<< "Please set the path_to_img" << std::endl;
+		return -1;
+	}
+
+	Mat img = imread(argv[1]);
 	Mat gray_img;
 
 	cvtColor(img, gray_img, CV_BGR2GRAY);
 	imwrite("test.jpg", gray_img);
-}  
+}

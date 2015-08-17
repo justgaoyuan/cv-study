@@ -1,1 +1,2 @@
-export PATH=/home/john/work/python:$PATH
+basepath=`pwd`
+export PATH=$basepath:$PATH
